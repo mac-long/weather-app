@@ -5,3 +5,9 @@ export function getUser(id) {
 		where: { id }
 	});
 }
+
+export function getUserItems(id) {
+	return prisma.item.findMany({
+		where: { userId: id }
+	});
+}
