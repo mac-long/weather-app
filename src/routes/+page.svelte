@@ -1,3 +1,6 @@
-<h1 class="text-4xl font-bold">Welcome to SvelteKit</h1>
-<button>Test</button>
-<button class="primary">Sweet</button>
+<script>
+	export let data;
+	console.log('🚀 ~ file: +page.svelte:3 ~ data', data);
+</script>
+
+<slot />
