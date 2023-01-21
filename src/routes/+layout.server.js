@@ -1,9 +1,10 @@
 import { error } from '@sveltejs/kit';
-import { getUser } from 'utilities/user';
-import { getUserItems } from '../lib/utilities/user';
+import { getUser, getUserItems } from 'utilities/user';
+import { searchWeatherLocations } from '../lib/utilities/weather';
 
 export async function load() {
-	const user = { user: await getUser(1), items: await getUserItems(1) };
-	if (user) return user;
-	throw error(404, 'User not found');
+	const user = { profile: await getUser(1), items: await getUserItems(1) };
+	const weather = searchWeatherLocations(user.profile?.homeTown || 'Bournemouth');
+	if (user && weather) return { user, weather };
+	throw error(404, 'Error, something not found');
 }

@@ -6,6 +6,8 @@ const config = {
 	preprocess: vitePreprocess(),
 	kit: {
 		alias: {
+			store: './src/lib/store',
+			styles: './src/app.css',
 			'components/*': './src/lib/components/*',
 			'utilities/*': './src/lib/utilities/*'
 		},

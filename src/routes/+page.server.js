@@ -1,10 +1,11 @@
-import { error } from '@sveltejs/kit';
-import { getCurrentWeather } from '../lib/utilities/weather';
+import { searchWeatherLocations } from '../lib/utilities/weather';
 
-export async function load() {
-	const { current, location } = await getCurrentWeather('London', process.env.WEATHER_KEY);
+export const actions = {
+	default: async ({ request }) => {
+		const data = await request.formData();
+		const query = data.get('query');
+		const weather = searchWeatherLocations(query);
 
-	if (current && location) return { currentWeather: { current, location } };
-
-	throw error(404, 'Error loading current weather');
-}
+		return weather;
+	}
+};
