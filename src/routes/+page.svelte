@@ -11,6 +11,12 @@
 		goto(`?location=${e.target.value}`, { replaceState: true, keepfocus: true });
 		searchOpen = true;
 	}, 500);
+
+	const setSearch = (name, lat, lon) => {
+		currentLocationStore.set(`${lat},${lon}`);
+		searchOpen = false;
+		goto(`?location=${name}`);
+	};
 </script>
 
 <div class="p-4 space-y-4">
@@ -24,14 +30,13 @@
 			value={$page.url.searchParams.get('location')}
 			on:input={updateSearch}
 		/>
-
 		{#if $locationsSearchStore.length > 0 && searchOpen}
 			<ul class="rounded-b-md shadow-md py-4 bg-white w-full">
 				{#each $locationsSearchStore as location}
 					<li
 						class="hover:bg-gray-100 cursor-pointer p-2"
-						on:click={() => currentLocationStore.set(`${location.lat},${location.lon}`)}
-						on:keydown={() => currentLocationStore.set(`${location.lat},${location.lon}`)}
+						on:click={() => setSearch(location.name, location.lat, location.lon)}
+						on:keydown={() => setSearch(location.name, location.lat, location.lon)}
 					>
 						{location.name}, {location.region}
 					</li>
@@ -39,4 +44,5 @@
 			</ul>
 		{/if}
 	</form>
+	{$currentLocationStore}
 </div>
