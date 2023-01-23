@@ -1,28 +1,42 @@
 <script>
-	export let data, form;
-	{
-		form?.length > 0 ? (data.weather = form) : null;
-	}
+	import { enhance } from '$app/forms';
+	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
+	import debounce from 'lodash.debounce';
+	import { currentLocationStore, locationsSearchStore } from 'store';
+	export let data, searchOpen;
+	$: $locationsSearchStore = data.locationsList;
+
+	const updateSearch = debounce((e) => {
+		goto(`?location=${e.target.value}`, { replaceState: true, keepfocus: true });
+		searchOpen = true;
+	}, 500);
 </script>
 
 <div class="p-4 space-y-4">
 	<h1 class="text-4xl font-bold">Welcome.</h1>
-	<form method="POST">
-		<input type="text" name="query" placeholder="Search for a location." />
+	<form method="POST" on:submit|preventDefault use:enhance>
 		<input
-			class="bg-blue-600 rounded-md px-4 py-2 text-white cursor-pointer hover:bg-blue-700 transition-colors duration-300"
-			type="submit"
-			value="Search"
+			class="rounded-md shadow-md p-4 bg-white w-full"
+			type="text"
+			name="location"
+			placeholder="Search for a location."
+			value={$page.url.searchParams.get('location')}
+			on:input={updateSearch}
 		/>
-	</form>
 
-	{#if data.weather.length > 0}
-		<ul>
-			{#each data.weather as location}
-				<li>{location.name}</li>
-			{/each}
-		</ul>
-	{:else}
-		<p>Please enter a location.</p>
-	{/if}
+		{#if $locationsSearchStore.length > 0 && searchOpen}
+			<ul class="rounded-b-md shadow-md py-4 bg-white w-full">
+				{#each $locationsSearchStore as location}
+					<li
+						class="hover:bg-gray-100 cursor-pointer p-2"
+						on:click={() => currentLocationStore.set(`${location.lat},${location.lon}`)}
+						on:keydown={() => currentLocationStore.set(`${location.lat},${location.lon}`)}
+					>
+						{location.name}, {location.region}
+					</li>
+				{/each}
+			</ul>
+		{/if}
+	</form>
 </div>

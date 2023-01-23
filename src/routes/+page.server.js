@@ -1,11 +1,9 @@
-import { searchWeatherLocations } from '../lib/utilities/weather';
+import { searchWeatherLocations } from 'utilities/weather';
 
-export const actions = {
-	default: async ({ request }) => {
-		const data = await request.formData();
-		const query = data.get('query');
-		const weather = searchWeatherLocations(query);
+export async function load({ url }) {
+	const locationsList = await searchWeatherLocations(
+		url.searchParams.get('location') || 'Bournemouth'
+	);
 
-		return weather;
-	}
-};
+	return { locationsList };
+}

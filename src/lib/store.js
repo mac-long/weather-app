@@ -1,4 +1,5 @@
 import { writable } from 'svelte/store';
 
-export const currentLocations = writable([]);
-export const userHometown = writable(null);
+export const userStore = writable();
+export const locationsSearchStore = writable();
+export const currentLocationStore = writable();
