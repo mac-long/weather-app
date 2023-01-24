@@ -9,16 +9,17 @@
 	}
 
 	h1,
-	h2 {
-		@apply font-bold font-heading;
+	h2,
+	h3 {
+		@apply font-bold font-heading text-white;
 	}
 
 	h1 {
-		@apply text-3xl leading-7;
+		@apply text-4xl leading-[1.5];
 	}
 
 	h2 {
-		@apply text-[21px] leading-10;
+		@apply text-3xl leading-10 uppercase;
 	}
 
 	h3 {
@@ -30,7 +31,7 @@
 	}
 
 	p {
-		@apply max-w-xs text-sm leading-[18px] tracking-[-0.2px];
+		@apply max-w-xs  leading-[18px] tracking-[-0.2px] text-center;
 	}
 
 	hr {
@@ -61,6 +62,18 @@
 		}
 	}
 
+	progress {
+		@apply w-full opacity-100 h-2 bg-primary rounded-md;
+
+		&::-webkit-progress-bar {
+			@apply opacity-50 bg-tertiary;
+		}
+
+		&::-webkit-progress-value {
+			@apply opacity-100 bg-gradient-to-r from-primary to-primaryDark;
+		}
+	}
+
 	button {
 		@apply bg-primary text-white rounded-md p-4 w-full font-bold font-heading uppercase leading-6 tracking-[-0.44px] hover:bg-[#F40256] transition-colors duration-300 ease-in-out;
 
@@ -69,7 +82,11 @@
 		}
 
 		&.ghost {
-			@apply bg-transparent min-w-0 p-0;
+			@apply bg-transparent min-w-0 p-0 hover:text-[#FFF200];
+		}
+
+		&.grey {
+			@apply bg-gray-600 text-white hover:bg-gray-500;
 		}
 	}
 }
