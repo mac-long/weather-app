@@ -5,14 +5,67 @@
 @layer base {
 	html,
 	body {
-		@apply font-sans;
+		@apply font-body text-black;
+	}
+
+	h1,
+	h2 {
+		@apply font-bold font-head;
+	}
+
+	h1 {
+		@apply text-3xl leading-7;
+	}
+
+	h2 {
+		@apply text-[21px] leading-10;
+	}
+
+	h3 {
+		@apply text-xs font-bold leading-[17px] tracking-[0.8px];
+	}
+
+	h4 {
+		@apply uppercase leading-4 tracing-[-0.44px];
+	}
+
+	p {
+		@apply max-w-xs text-sm leading-[18px] tracking-[-0.2px];
+	}
+
+	hr {
+		@apply w-full h-[2px] bg-primary;
+	}
+
+	ul {
+		@apply list-none w-full;
+
+		li {
+			@apply shadow-[0px -1px 0px 0px #E7EAEB inset];
+		}
+	}
+
+	input {
+		@apply bg-white min-w-[315px];
+
+		[type='checkbox'] {
+			@apply w-4 h-4 rounded-full border-[2px] border-tertiary;
+
+			&:checked {
+				@apply bg-primary;
+			}
+		}
+
+		&::placeholder {
+			@apply text-secondary font-bold tracking-[-0.4px] leading-[22px];
+		}
 	}
 
 	button {
-		@apply bg-gray-500;
+		@apply bg-primary text-white rounded-md p-4 min-w-[315px] font-bold uppercase leading-6 tracking-[-0.44px];
 
-		&.primary {
-			@apply bg-blue-500;
+		&.ghost {
+			@apply bg-transparent min-w-0 p-0;
 		}
 	}
 }
