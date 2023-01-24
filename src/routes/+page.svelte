@@ -25,14 +25,13 @@
 	<h1 class="text-4xl font-bold">Welcome.</h1>
 	<form method="POST" on:submit|preventDefault use:enhance>
 		<input
-			class="w-full p-4 bg-white rounded-md shadow-md mb-4"
+			class="mb-4"
 			type="text"
 			name="location"
 			placeholder="Search for a location."
 			value={$page.url.searchParams.get('location')}
 			on:input={updateSearch}
 		/>
-		<button>Primary</button>
 		{#if $locationsSearchStore.length > 0 && searchOpen}
 			<ul class="w-full py-4 bg-white shadow-md rounded-b-md">
 				{#each $locationsSearchStore as location}

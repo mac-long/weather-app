@@ -46,7 +46,7 @@
 	}
 
 	input {
-		@apply bg-white min-w-[315px];
+		@apply min-w-[315px] w-full px-2 py-1 bg-white rounded-md border-2 border-secondary;
 
 		[type='checkbox'] {
 			@apply w-4 h-4 rounded-full border-[2px] border-tertiary;
