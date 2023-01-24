@@ -47,6 +47,3 @@
 		{/if}
 	</form>
 </div>
-<div class="p-4 space-y-4">
-	{JSON.stringify($currentLocationStore)}
-</div>
