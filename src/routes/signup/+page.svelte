@@ -21,13 +21,13 @@
 	};
 </script>
 
-<div class="w-screen h-screen bg-[#333] flex flex-col justify-end">
+<div class="w-screen h-screen bg-[#333] flex flex-col justify-end overflow-y-hidden">
 	<div
 		class="flex flex-col items-start w-screen h-[95%] rounded-t-[41px] relative bg-gradient-to-b from-primary-500 to-primaryDark"
 	>
 		<Header {currentStep} {searchOpen} />
 		<Progress {currentStep} />
-		<div class="w-full h-full px-8 bg-white">
+		<div class="w-full h-full px-8 overflow-y-auto bg-white">
 			{#if $currentStep === 1}
 				<Step
 					{handleClick}

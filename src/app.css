@@ -63,7 +63,7 @@
 	}
 
 	progress {
-		@apply w-full opacity-100 h-2 bg-primary rounded-md;
+		@apply w-full opacity-100 h-2 bg-primary-500 rounded-md;
 
 		&::-webkit-progress-bar {
 			@apply opacity-50 bg-tertiary;
@@ -75,7 +75,7 @@
 	}
 
 	button {
-		@apply bg-primary-500 text-white rounded-md p-4 w-full font-bold font-heading uppercase leading-6 tracking-[-0.44px] hover:bg-[] transition-colors duration-300 ease-in-out;
+		@apply bg-primary-500 text-white rounded-md p-4 w-full font-bold font-heading uppercase leading-6 tracking-[-0.44px] hover:bg-primary-600 transition-colors duration-300 ease-in-out;
 
 		&.secondary {
 			@apply bg-white text-primary-500 hover:bg-tertiary;

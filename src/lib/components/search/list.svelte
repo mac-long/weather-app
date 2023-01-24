@@ -9,7 +9,7 @@
 	};
 </script>
 
-<ul class="w-full py-4 mx-auto space-y-4 overflow-y-scroll text-center">
+<ul class="w-full py-4 mx-auto space-y-4 overflow-y-auto text-center">
 	{#each $locationsSearchStore as location}
 		<li
 			class="flex items-center justify-between w-5/6 p-4 mx-auto text-left rounded-md cursor-pointer border-[1px] border-secondary group"
