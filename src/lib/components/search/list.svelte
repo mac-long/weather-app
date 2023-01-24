@@ -1,24 +1,53 @@
 <script>
+	import { goto } from '$app/navigation';
 	import { locationsSearchStore } from 'store';
+	export let searchOpen;
 
 	const setSearch = (name, lat, lon) => {
 		goto(`?location=${name}&lat=${lat}&lon=${lon}`, { replaceState: true, keepfocus: true });
-		searchOpen = false;
+		searchOpen = true;
 	};
 </script>
 
-{#if $locationsSearchStore?.length > 0}
-	<ul class="w-full py-4 bg-white shadow-md rounded-b-md">
-		{#each $locationsSearchStore as location}
-			<li
-				class="p-2 cursor-pointer hover:bg-gray-100"
-				on:click={() => setSearch(location.name, location.lat, location.lon)}
-				on:keydown={() => setSearch(location.name, location.lat, location.lon)}
+<ul class="w-full py-4 mx-auto space-y-4 overflow-y-scroll text-center">
+	{#each $locationsSearchStore as location}
+		<li
+			class="flex items-center justify-between w-5/6 p-4 mx-auto text-left rounded-md cursor-pointer border-[1px] border-secondary group"
+			on:click={() => setSearch(location.name, location.lat, location.lon)}
+			on:keydown={() => setSearch(location.name, location.lat, location.lon)}
+		>
+			<div class="flex flex-col w-5/6">
+				<span class="font-bold uppercase font-heading">{location.name}</span>
+				<span class="font-bold">{location.region}, {location.country}</span>
+			</div>
+			<button
+				class="grid w-12 h-12 p-0 bg-black rounded-md place-items-center group-hover:bg-primary"
 			>
-				{location.name}, {location.region}
-			</li>
-		{/each}
-	</ul>
-{:else}
-	<span class="block p-4 text-center text-black">No results found.</span>
-{/if}
+				<svg
+					width="49"
+					height="48"
+					viewBox="0 0 49 48"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<rect
+						x="27.6499"
+						y="21.636"
+						width="4"
+						height="14"
+						rx="2"
+						transform="rotate(45 27.6499 21.636)"
+						fill="white"
+					/>
+					<rect
+						width="4"
+						height="14"
+						rx="2"
+						transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 27.6499 27.364)"
+						fill="white"
+					/>
+				</svg>
+			</button>
+		</li>
+	{/each}
+</ul>

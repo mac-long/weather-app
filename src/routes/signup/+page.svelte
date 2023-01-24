@@ -1,12 +1,20 @@
 <script>
+	import Header from 'components/onboarding/header.svelte';
+	import Progress from 'components/onboarding/progress.svelte';
+	import List from 'components/search/list.svelte';
+	import Form from 'components/signup/form.svelte';
+	import Step from 'components/signup/step.svelte';
+	import { currentLocationStore, locationsSearchStore, userStore } from 'store';
 	import { writable } from 'svelte/store';
 	import { t } from 'translations';
-	import Header from '../../lib/components/onboarding/header.svelte';
-	import Progress from '../../lib/components/onboarding/progress.svelte';
-	import List from '../../lib/components/search/list.svelte';
-	import Form from '../../lib/components/signup/form.svelte';
-	import Step from '../../lib/components/signup/step.svelte';
-	let currentStep = writable(1);
+
+	export let data;
+	$: $userStore = data.user;
+	$: $locationsSearchStore = data.locationsList;
+	$: $currentLocationStore = data.currentLocation;
+
+	let currentStep = writable(1),
+		searchOpen = false;
 
 	const handleClick = () => {
 		currentStep.update((n) => n + 1);
@@ -17,7 +25,7 @@
 	<div
 		class="flex flex-col items-start w-screen h-[95%] rounded-t-[41px] relative bg-gradient-to-b from-primary to-primaryDark"
 	>
-		<Header {currentStep} {handleClick} />
+		<Header {currentStep} {searchOpen} />
 		<Progress {currentStep} />
 		<div class="w-full h-full px-8 bg-white">
 			{#if $currentStep === 1}
@@ -45,7 +53,7 @@
 					<Form />
 				</Step>
 			{:else if $currentStep === 4}
-				<List />
+				<List {searchOpen} />
 			{/if}
 		</div>
 	</div>

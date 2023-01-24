@@ -4,7 +4,7 @@
 	import { currentLocationStore, locationsSearchStore, userStore } from 'store';
 	import { t } from 'translations';
 	export let data;
-	let searchOpen, progress;
+
 	$: $userStore = data.user;
 	$: $locationsSearchStore = data.locationsList;
 	$: $currentLocationStore = data.currentLocation;
