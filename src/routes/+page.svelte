@@ -1,5 +1,4 @@
 <script>
-	import { enhance } from '$app/forms';
 	import { goto } from '$app/navigation';
 	import { currentLocationStore, locationsSearchStore, userStore } from 'store';
 	import { t } from 'translations';
@@ -8,13 +7,38 @@
 	$: $userStore = data.user;
 	$: $locationsSearchStore = data.locationsList;
 	$: $currentLocationStore = data.currentLocation;
+
+	if (userStore.isLoggedIn) goto('');
 </script>
 
 {#if $userStore.isLoggedIn}
-	<div class="p-4 space-y-4">
-		<h1 class="text-4xl font-bold">Welcome.</h1>
-		<form method="POST" on:submit|preventDefault use:enhance />
-	</div>
+	<header
+		class="flex items-center justify-between w-screen h-32 px-4 bg-gradient-to-b from-primary to-primaryDark"
+	>
+		<div class="flex items-center w-auto space-x-4">
+			<img class="h-12 w-14" src="/cloudy.webp" alt="" role="presentation" />
+			<h1 class="uppercase">Weather App</h1>
+		</div>
+		<button class="w-auto ghost">
+			<svg
+				width="26"
+				height="24"
+				viewBox="0 0 26 24"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<g id="Add">
+					<g id="np_add_1776296_FFFFFF">
+						<path
+							id="Path"
+							d="M9.92139 0V9.75H0.171387V14.25H9.92139V24H14.4214V14.25H24.1714V9.75H14.4214V0H9.92139Z"
+							fill="white"
+						/>
+					</g>
+				</g>
+			</svg>
+		</button>
+	</header>
 {:else}
 	<div
 		class="flex flex-col items-center justify-center w-screen h-screen px-16 space-y-4 bg-primary"

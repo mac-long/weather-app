@@ -3,6 +3,6 @@ export async function load() {
 	// if (userData) return { user: { isLoggedIn: true, ...userData } };
 	// throw error('404', 'User not found');
 	return {
-		user: { isLoggedIn: false, profile: {}, items: [] }
+		user: { isLoggedIn: true, profile: {}, items: [], locations: [] }
 	};
 }
