@@ -62,7 +62,11 @@
 	}
 
 	button {
-		@apply bg-primary text-white rounded-md p-4 w-full font-bold font-heading uppercase leading-6 tracking-[-0.44px];
+		@apply bg-primary text-white rounded-md p-4 w-full font-bold font-heading uppercase leading-6 tracking-[-0.44px] hover:bg-[#F40256] transition-colors duration-300 ease-in-out;
+
+		&.secondary {
+			@apply bg-white text-primary hover:bg-tertiary;
+		}
 
 		&.ghost {
 			@apply bg-transparent min-w-0 p-0;
