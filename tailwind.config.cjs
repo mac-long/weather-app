@@ -4,11 +4,9 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				primary: {
-					light: '#F40256',
-					dark: '#FE00C6'
-				},
-				secondary: '#7f7f7f'
+				primary: '#F50169',
+				secondary: '#7f7f7f',
+				tertiary: '#f1f1f1'
 			},
 			fontFamily: {
 				heading: ['Poppins', 'sans-serif'],
@@ -18,6 +16,5 @@ module.exports = {
 				nav: '0px 0px 2px rgba(0, 0, 0, 0.5);'
 			}
 		}
-	},
-	plugins: [require('@tailwindcss/forms')]
+	}
 };
