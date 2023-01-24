@@ -7,7 +7,7 @@
 	};
 </script>
 
-{#if $locationsSearchStore.length > 0}
+{#if $locationsSearchStore?.length > 0}
 	<ul class="w-full py-4 bg-white shadow-md rounded-b-md">
 		{#each $locationsSearchStore as location}
 			<li
