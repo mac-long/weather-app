@@ -1,6 +1,7 @@
 <script>
 	import { t } from 'translations';
 	import Bar from '../search/bar.svelte';
+	import Switch from '../search/switch.svelte';
 	import Title from './title.svelte';
 	export let currentStep, searchOpen;
 </script>
@@ -12,8 +13,9 @@
 		<button class="w-auto ghost">{$t('base.general.button.skip')}</button>
 	</div>
 	{#if $currentStep === 4}
-		<div class="flex items-center justify-center px-12">
+		<div class="flex flex-col items-center justify-center px-12 py-2">
 			<Bar {searchOpen} />
+			<Switch options={['List', 'Map']} />
 		</div>
 	{/if}
 </div>
