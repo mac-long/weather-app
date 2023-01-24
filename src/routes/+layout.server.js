@@ -1,9 +1,8 @@
-import { error } from '@sveltejs/kit';
-import { getUser, getUserItems } from 'utilities/user';
-
 export async function load() {
-	const userData = { profile: await getUser(1), items: await getUserItems(1) };
-	if (userData) return { user: userData };
-
-	throw error('404', 'User not found');
+	// const userData = { profile: await getUser(), items: await getUserItems() };
+	// if (userData) return { user: { isLoggedIn: true, ...userData } };
+	// throw error('404', 'User not found');
+	return {
+		user: { isLoggedIn: false, profile: {}, items: [] }
+	};
 }
