@@ -7,6 +7,12 @@
 - **Prisma**: A convenient tool for interfacing with various databases.
 - **Tailwind**: Styling. Great for fast prototyping and building extensive design systems. Coupled with PostCSS Nesting makes for clean styling.
 
+## To Do
+
+- [ ] Prismic CMS with slices and pages.
+- [ ] Blog withn ChatGPT and Prismic Slices.
+- [ ] ChatGPT Tips for Weather.
+
 ## How To Use
 
 1. `git clone https://github.com/mac-long/weather-app`.
