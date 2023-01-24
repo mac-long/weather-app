@@ -5,3 +5,9 @@ export async function searchWeatherLocations(text) {
 		(res) => res.json()
 	);
 }
+
+export async function getCurrentWeatherByLatLon(lat, lon) {
+	return await fetch(
+		`${WEATHER_BASE_URL}/forecast.json?key=${WEATHER_API_KEY}&q=${lat},${lon}&days=7&aqi=yes&alerts=yes`
+	).then((res) => res.json());
+}

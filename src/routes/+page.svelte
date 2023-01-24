@@ -3,9 +3,12 @@
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import debounce from 'lodash.debounce';
-	import { currentLocationStore, locationsSearchStore } from 'store';
-	export let data, searchOpen;
+	import { currentLocationStore, locationsSearchStore, userStore } from 'store';
+	export let data;
+	let searchOpen;
+	$: $userStore = data.user;
 	$: $locationsSearchStore = data.locationsList;
+	$: $currentLocationStore = data.currentLocation;
 
 	const updateSearch = debounce((e) => {
 		goto(`?location=${e.target.value}`, { replaceState: true, keepfocus: true });
@@ -13,9 +16,8 @@
 	}, 500);
 
 	const setSearch = (name, lat, lon) => {
-		currentLocationStore.set(`${lat},${lon}`);
+		goto(`?location=${name}&lat=${lat}&lon=${lon}`, { replaceState: true, keepfocus: true });
 		searchOpen = false;
-		goto(`?location=${name}`);
 	};
 </script>
 
@@ -23,7 +25,7 @@
 	<h1 class="text-4xl font-bold">Welcome.</h1>
 	<form method="POST" on:submit|preventDefault use:enhance>
 		<input
-			class="rounded-md shadow-md p-4 bg-white w-full"
+			class="w-full p-4 bg-white rounded-md shadow-md"
 			type="text"
 			name="location"
 			placeholder="Search for a location."
@@ -31,10 +33,10 @@
 			on:input={updateSearch}
 		/>
 		{#if $locationsSearchStore.length > 0 && searchOpen}
-			<ul class="rounded-b-md shadow-md py-4 bg-white w-full">
+			<ul class="w-full py-4 bg-white shadow-md rounded-b-md">
 				{#each $locationsSearchStore as location}
 					<li
-						class="hover:bg-gray-100 cursor-pointer p-2"
+						class="p-2 cursor-pointer hover:bg-gray-100"
 						on:click={() => setSearch(location.name, location.lat, location.lon)}
 						on:keydown={() => setSearch(location.name, location.lat, location.lon)}
 					>
@@ -44,5 +46,7 @@
 			</ul>
 		{/if}
 	</form>
-	{$currentLocationStore}
+</div>
+<div class="p-4 space-y-4">
+	{JSON.stringify($currentLocationStore)}
 </div>
