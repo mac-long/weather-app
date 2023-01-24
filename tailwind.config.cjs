@@ -11,8 +11,8 @@ module.exports = {
 				secondary: '#7f7f7f'
 			},
 			fontFamily: {
-				poppins: ['Poppins', 'sans-serif'],
-				anonymous: ['Anonymous Pro', 'monospace']
+				heading: ['Poppins', 'sans-serif'],
+				body: ['Anonymous Pro', 'monospace']
 			},
 			boxShadow: {
 				nav: '0px 0px 2px rgba(0, 0, 0, 0.5);'
