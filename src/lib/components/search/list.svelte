@@ -21,7 +21,7 @@
 				<span class="font-bold">{location.region}, {location.country}</span>
 			</div>
 			<button
-				class="grid w-12 h-12 p-0 duration-100 bg-black rounded-md place-items-center group-hover:bg-primary"
+				class="grid w-12 h-12 p-0 duration-100 bg-black rounded-md place-items-center group-hover:bg-primary-500"
 			>
 				<svg
 					width="49"

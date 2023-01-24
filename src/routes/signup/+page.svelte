@@ -23,7 +23,7 @@
 
 <div class="w-screen h-screen bg-[#333] flex flex-col justify-end">
 	<div
-		class="flex flex-col items-start w-screen h-[95%] rounded-t-[41px] relative bg-gradient-to-b from-primary to-primaryDark"
+		class="flex flex-col items-start w-screen h-[95%] rounded-t-[41px] relative bg-gradient-to-b from-primary-500 to-primaryDark"
 	>
 		<Header {currentStep} {searchOpen} />
 		<Progress {currentStep} />
