@@ -1,5 +1,6 @@
 {
 	"general.title": "Weather App",
+	"general.today": "Today",
 	"general.button.next": "Next",
 	"general.button.confirm": "Confirm",
 	"general.button.cancel": "Cancel",
@@ -24,6 +25,8 @@
 	"onboarding.step2.paragraph": "Search for a location of interest or monitor your current location so you can see weather in areas of importance.",
 	"onboarding.step3.heading": "Sign up to Cube Weather",
 	"onboarding.step3.paragraph": "Sign up to save your favourite locations and receive personalised weather alerts.",
+	"onboarding.signup.email.placeholder": "Enter your email",
+	"onboarding.signup.password.placeholder": "Enter your password",
 
 	"search.title": "Search",
 	"search.placeholder": "Search by postcode, town or country",
