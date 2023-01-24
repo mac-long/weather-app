@@ -13,10 +13,10 @@
 
 {#if $userStore.isLoggedIn}
 	<header
-		class="flex items-center justify-between w-screen h-32 px-4 bg-gradient-to-b from-primary to-primaryDark"
+		class="flex items-center justify-between w-screen h-32 px-4 pt-16 pb-2 bg-gradient-to-tr from-primary to-primaryDark"
 	>
 		<div class="flex items-center w-auto space-x-4">
-			<img class="h-12 w-14" src="/cloudy.webp" alt="" role="presentation" />
+			<img class="w-16 h-12" src="/cloudy.webp" alt="" role="presentation" />
 			<h1 class="uppercase">Weather App</h1>
 		</div>
 		<button class="w-auto ghost">
