@@ -10,7 +10,7 @@
 
 	h1,
 	h2 {
-		@apply font-bold font-head;
+		@apply font-bold font-heading;
 	}
 
 	h1 {
@@ -26,7 +26,7 @@
 	}
 
 	h4 {
-		@apply uppercase leading-4 tracing-[-0.44px];
+		@apply uppercase leading-4 tracking-[-0.44px];
 	}
 
 	p {
@@ -41,7 +41,7 @@
 		@apply list-none w-full;
 
 		li {
-			@apply shadow-[0px -1px 0px 0px #E7EAEB inset];
+			@apply shadow-[0px,-1px,0px,0px,#E7EAEB,inset];
 		}
 	}
 
@@ -62,7 +62,7 @@
 	}
 
 	button {
-		@apply bg-primary text-white rounded-md p-4 min-w-[315px] font-bold uppercase leading-6 tracking-[-0.44px];
+		@apply bg-primary text-white rounded-md p-4 w-full font-bold font-heading uppercase leading-6 tracking-[-0.44px];
 
 		&.ghost {
 			@apply bg-transparent min-w-0 p-0;
