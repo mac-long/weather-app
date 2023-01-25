@@ -6,7 +6,7 @@
 <div class="w-full py-4 bg-gradient-to-br from-primaryDark to-primary-500">
 	<div class="flex items-center justify-center">
 		<div class="text-center text-white">
-			<span class="flex items-center mb-4 space-x-2 text-2xl uppercase font-heading">
+			<span class="flex items-center justify-center mb-4 space-x-2 text-2xl uppercase font-heading">
 				<svg
 					width="23"
 					height="24"
