@@ -42,6 +42,10 @@
 		@apply list-none w-full;
 	}
 
+	a {
+		@apply cursor-pointer;
+	}
+
 	input {
 		@apply min-w-[315px] w-full px-2 py-1 bg-white rounded-md border-2 border-secondary;
 

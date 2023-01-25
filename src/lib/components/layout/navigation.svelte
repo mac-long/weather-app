@@ -5,7 +5,7 @@
 <div
 	class="fixed bottom-0 flex items-center justify-center uppercase w-screen py-2 space-x-16 bg-white text-[#333]"
 >
-	<div class="flex flex-col items-center" class:active={$page.url.pathname === '/'}>
+	<a class="flex flex-col items-center" class:active={$page.url.pathname === '/'} href="/">
 		<svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<g opacity="0.917759">
 				<g opacity="0.917759">
@@ -21,9 +21,13 @@
 			</g>
 		</svg>
 
-		<a class="text-lg font-bold font-heading" href="/">Forecast</a>
-	</div>
-	<div class="flex flex-col items-center" class:active={$page.url.pathname === '/prepare'}>
+		<span class="text-lg font-bold font-heading">Forecast</span>
+	</a>
+	<a
+		class="flex flex-col items-center"
+		class:active={$page.url.pathname === '/prepare'}
+		href="/prepare"
+	>
 		<svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<g opacity="0.917759">
 				<g opacity="0.917759">
@@ -39,9 +43,13 @@
 			</g>
 		</svg>
 
-		<a class="text-lg font-bold font-heading" href="/prepare">Prepare</a>
-	</div>
-	<div class="flex flex-col items-center" class:active={$page.url.pathname === '/profile'}>
+		<span class="text-lg font-bold font-heading">Prepare</span>
+	</a>
+	<a
+		class="flex flex-col items-center"
+		class:active={$page.url.pathname === '/profile'}
+		href="/profile"
+	>
 		<svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<g opacity="0.917759">
 				<g opacity="0.917759">
@@ -57,8 +65,8 @@
 			</g>
 		</svg>
 
-		<a class="text-lg font-bold font-heading" href="/profile">Profile</a>
-	</div>
+		<span class="text-lg font-bold font-heading">Profile</span>
+	</a>
 </div>
 
 <style>
