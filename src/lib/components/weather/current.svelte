@@ -31,11 +31,10 @@
 					month: 'long'
 				})} - {$t('base.general.today')}</span
 			>
-			<img
-				class="mx-auto my-6 border-8 border-white rounded-full h-52 w-52"
-				src="https://www.metaweather.com/static/img/weather/png/64/c.png"
-				alt="Cloudy"
-			/>
+			<div class="relative my-8 border-white border-[12px] rounded-full">
+				<img class="rounded-full w-full " src="weather-placeholder.webp" alt="Weather" />
+				<div class="absolute top-0 left-0 w-full h-full rounded-full bg-[url(texture.webp)] " />
+			</div>
 			<div class="flex flex-col items-center">
 				<span class="text-4xl font-extrabold  font-heading leading-[40px] tracking-[0.6px] ">
 					{locations?.[0].current.temp_c || 21}°

@@ -6,7 +6,7 @@
 	class="flex items-center justify-between w-screen h-32 px-4 pt-16 pb-2 bg-gradient-to-tr from-primary-500 to-primaryDark"
 >
 	<div class="flex items-center w-auto space-x-4">
-		<img class="w-16 h-12" src="/cloudy.webp" alt="" role="presentation" />
+		<img class="w-16 h-12" src="cloudy.webp" alt="" role="presentation" />
 		<h1 class="uppercase">{$t('base.general.title')}</h1>
 	</div>
 	<button class="w-auto ghost">
