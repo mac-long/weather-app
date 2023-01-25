@@ -27,7 +27,7 @@
 	}
 
 	h4 {
-		@apply uppercase leading-4 tracking-[-0.44px];
+		@apply uppercase leading-4 text-2xl tracking-[-0.44px] font-bold font-heading;
 	}
 
 	p {
@@ -35,7 +35,7 @@
 	}
 
 	hr {
-		@apply w-full h-[2px] bg-primary-500;
+		@apply w-full bg-primary-500 py-0.5 border-0;
 	}
 
 	ul {
