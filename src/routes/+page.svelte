@@ -1,6 +1,7 @@
 <script>
 	import { goto } from '$app/navigation';
 	import Header from 'components/layout/header.svelte';
+	import Navigation from 'components/layout/navigation.svelte';
 	import Main from 'components/weather/main.svelte';
 	import TimeForecast from 'components/weather/time/forecast.svelte';
 	import WeekForecast from 'components/weather/week/forecast.svelte';
@@ -18,6 +19,7 @@
 	<Main />
 	<TimeForecast />
 	<WeekForecast />
+	<Navigation />
 {:else}
 	<div
 		class="flex flex-col items-center justify-center w-screen h-screen px-16 space-y-4 bg-primary-500"
