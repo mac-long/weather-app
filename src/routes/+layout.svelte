@@ -14,7 +14,9 @@
 	import '@fontsource/anonymous-pro';
 	import '@fontsource/poppins/400.css';
 	import '@fontsource/poppins/700.css';
+	import Navigation from 'components/layout/navigation.svelte';
 	import 'styles';
 </script>
 
 <slot />
+<Navigation />

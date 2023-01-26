@@ -19,7 +19,6 @@
 	<Main />
 	<TimeForecast />
 	<WeekForecast />
-	<Navigation />
 {:else}
 	<div
 		class="flex flex-col items-center justify-center w-screen h-screen px-16 space-y-4 bg-primary-500"
