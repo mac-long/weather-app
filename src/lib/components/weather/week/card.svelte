@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="flex items-center justify-between h-16 px-4 text-white py-14 rounded-xl bg-gradient-to-tr from-primary-500 to-primaryDark"
+	class="flex items-center justify-between h-16 px-4 py-12 text-white rounded-xl bg-gradient-to-tr from-primary-500 to-primaryDark"
 >
 	<div class="flex flex-col space-y-2">
 		<span class="text-2xl font-bold font-heading">{day}</span><span class="text-xl"

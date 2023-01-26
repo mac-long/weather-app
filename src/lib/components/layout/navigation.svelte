@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="fixed bottom-0 flex items-center justify-center uppercase w-screen py-2 space-x-16 bg-white text-[#333]"
+	class="fixed bottom-0 flex items-center justify-evenly uppercase w-screen py-2 bg-white text-[#333]"
 >
 	<a class="flex flex-col items-center" class:active={$page.url.pathname === '/'} href="/">
 		<svg
