@@ -6,7 +6,14 @@
 	class="fixed bottom-0 flex items-center justify-center uppercase w-screen py-2 space-x-16 bg-white text-[#333]"
 >
 	<a class="flex flex-col items-center" class:active={$page.url.pathname === '/'} href="/">
-		<svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<svg
+			class="w-8 h-8"
+			width="49"
+			height="48"
+			viewBox="0 0 49 48"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
 			<g opacity="0.917759">
 				<g opacity="0.917759">
 					<path
@@ -28,7 +35,14 @@
 		class:active={$page.url.pathname === '/prepare'}
 		href="/prepare"
 	>
-		<svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<svg
+			class="w-8 h-8"
+			width="49"
+			height="48"
+			viewBox="0 0 49 48"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
 			<g opacity="0.917759">
 				<g opacity="0.917759">
 					<path
@@ -50,7 +64,14 @@
 		class:active={$page.url.pathname === '/profile'}
 		href="/profile"
 	>
-		<svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<svg
+			class="w-8 h-8"
+			width="49"
+			height="48"
+			viewBox="0 0 49 48"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
 			<g opacity="0.917759">
 				<g opacity="0.917759">
 					<path
