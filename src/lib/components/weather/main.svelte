@@ -1,5 +1,6 @@
 <script>
 	import { t } from 'translations';
+	import CircleImage from '../general/circle-image.svelte';
 	export let locations;
 </script>
 
@@ -31,10 +32,7 @@
 					month: 'long'
 				})} - {$t('base.general.today')}</span
 			>
-			<div class="relative my-8 border-white border-[12px] rounded-full">
-				<img class="rounded-full w-full " src="weather-placeholder.webp" alt="Weather" />
-				<div class="absolute top-0 left-0 w-full h-full rounded-full bg-[url(texture.webp)] " />
-			</div>
+			<CircleImage src="weather-placeholder.webp" presentation />
 			<div class="flex flex-col items-center">
 				<span class="text-4xl font-extrabold  font-heading leading-[40px] tracking-[0.6px] ">
 					{locations?.[0].current.temp_c || 21}°

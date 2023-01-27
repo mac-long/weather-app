@@ -1,6 +1,5 @@
 <script>
 	import { goto } from '$app/navigation';
-	import Header from 'components/weather/header.svelte';
 	import Main from 'components/weather/main.svelte';
 	import TimeForecast from 'components/weather/time/forecast.svelte';
 	import WeekForecast from 'components/weather/week/forecast.svelte';
@@ -16,7 +15,6 @@
 </script>
 
 {#if $userStore.isLoggedIn}
-	<Header />
 	<Main />
 	<TimeForecast {date} />
 	<WeekForecast today={date.getDay()} />

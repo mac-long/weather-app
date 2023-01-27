@@ -1,4 +1,5 @@
 <script>
+	import { page } from '$app/stores';
 	import { t } from 'translations';
 </script>
 
@@ -7,7 +8,13 @@
 >
 	<div class="flex items-center w-auto space-x-4">
 		<img class="w-14 h-10 md:w-16 md:h-12" src="cloudy.webp" alt="" role="presentation" />
-		<h1 class="uppercase">{$t('base.general.title')}</h1>
+		<h1 class="uppercase">
+			{$t(
+				`base.general.title.${
+					$page.url.pathname === '/' ? 'forecast' : $page.url.pathname.slice(1)
+				}`
+			)}
+		</h1>
 	</div>
 	<button class="w-auto ghost">
 		<svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
