@@ -16,6 +16,7 @@ model User {
   dateOfBirth DateTime
   homeTown String
   items Item[] 
+  locations Location[]
   favouriteWeather Weather 
   firstVisit Boolean @default(true)
 }
@@ -26,6 +27,18 @@ model Item {
   weatherType Weather
   userId Int
   user   User @relation(fields: [userId], references: [id])
+
+  @@index([userId])
+}
+
+model Location {
+  id Int @id @default(autoincrement())
+  name String
+  latitude Float
+  longitude Float
+  userId Int
+  user   User @relation(fields: [userId], references: [id])
+  
 
   @@index([userId])
 }
