@@ -8,6 +8,8 @@
 	import { t } from 'translations';
 	export let data;
 
+	const date = new Date();
+
 	$: $userStore = data.user;
 	$: $locationsSearchStore = data.locationsList;
 	$: $currentLocationStore = data.currentLocation;
@@ -16,8 +18,8 @@
 {#if $userStore.isLoggedIn}
 	<Header />
 	<Main />
-	<TimeForecast />
-	<WeekForecast />
+	<TimeForecast {date} />
+	<WeekForecast today={date.getDay()} />
 {:else}
 	<div
 		class="flex flex-col items-center justify-center w-screen h-screen px-16 space-y-4 bg-primary-500"

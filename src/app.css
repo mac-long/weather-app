@@ -19,7 +19,7 @@
 	}
 
 	h2 {
-		@apply text-3xl leading-10 uppercase;
+		@apply text-2xl md:text-3xl leading-10 uppercase;
 	}
 
 	h3 {

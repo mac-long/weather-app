@@ -1,8 +1,8 @@
 <!-- TODO: Move the `today` variable to `+page.svelte` and see if you can use one instance of date in time and week components -->
 <script>
 	import Card from './card.svelte';
+	export let today;
 
-	const today = new Date().getDay();
 	let daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 	daysOfWeek = daysOfWeek.slice(today).concat(daysOfWeek.slice(0, today));
 </script>

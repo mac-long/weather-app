@@ -1,5 +1,6 @@
 <script>
 	import Card from './card.svelte';
+	export let date;
 
 	let times = [
 		'12AM',
@@ -28,11 +29,8 @@
 		'11PM'
 	];
 
-	let currentTime = new Date()
-		.toLocaleTimeString('en-US', {
-			hour: 'numeric',
-			hour12: true
-		})
+	let currentTime = date
+		.toLocaleTimeString('en-US', { hour: 'numeric', hour12: true })
 		.replace(/\s/g, '');
 
 	times = times
