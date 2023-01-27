@@ -9,19 +9,19 @@
 	};
 </script>
 
-<ul class="w-full py-4 mx-auto space-y-4 overflow-y-scroll text-center">
+<ul class="w-full py-4 mx-auto space-y-4 overflow-y-auto text-center">
 	{#each $locationsSearchStore as location}
 		<li
-			class="flex items-center justify-between w-5/6 p-4 mx-auto text-left rounded-md cursor-pointer border-[1px] border-secondary group"
-			on:click={() => setSearch(location.name, location.lat, location.lon)}
-			on:keydown={() => setSearch(location.name, location.lat, location.lon)}
+			class="flex items-center justify-between w-full p-4 mx-auto text-left rounded-md cursor-pointer border-[1px] border-secondary group"
+			on:click={() => setSearch(location?.name, location.lat, location.lon)}
+			on:keydown={() => setSearch(location?.name, location.lat, location.lon)}
 		>
 			<div class="flex flex-col w-5/6">
-				<span class="font-bold uppercase font-heading">{location.name}</span>
-				<span class="font-bold">{location.region}, {location.country}</span>
+				<span class="font-bold uppercase font-heading">{location?.name}</span>
+				<span class="font-bold">{location?.region}, {location.country}</span>
 			</div>
 			<button
-				class="grid w-12 h-12 p-0 duration-100 bg-black rounded-md place-items-center group-hover:bg-primary"
+				class="grid w-12 h-12 p-0 duration-100 bg-black rounded-md place-items-center group-hover:bg-primary-500"
 			>
 				<svg
 					width="49"

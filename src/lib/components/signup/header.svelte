@@ -1,8 +1,8 @@
 <script>
+	import Bar from 'components/search/bar.svelte';
+	import Switch from 'components/search/switch.svelte';
+	import Title from 'components/signup/title.svelte';
 	import { t } from 'translations';
-	import Bar from '../search/bar.svelte';
-	import Switch from '../search/switch.svelte';
-	import Title from './title.svelte';
 	export let currentStep, searchOpen;
 </script>
 

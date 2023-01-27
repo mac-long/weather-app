@@ -11,10 +11,17 @@
 </script>
 
 <script>
+	import { page } from '$app/stores';
 	import '@fontsource/anonymous-pro';
 	import '@fontsource/poppins/400.css';
 	import '@fontsource/poppins/700.css';
+	import Navigation from 'components/layout/navigation.svelte';
 	import 'styles';
 </script>
 
-<slot />
+{#if $page.url.pathname.includes('signup')}
+	<slot />
+{:else}
+	<slot />
+	<Navigation />
+{/if}
