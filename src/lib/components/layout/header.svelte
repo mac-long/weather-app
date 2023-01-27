@@ -16,17 +16,25 @@
 			)}
 		</h1>
 	</div>
-	<button class="w-auto ghost">
-		<svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<g id="Add">
-				<g id="np_add_1776296_FFFFFF">
-					<path
-						id="Path"
-						d="M9.92139 0V9.75H0.171387V14.25H9.92139V24H14.4214V14.25H24.1714V9.75H14.4214V0H9.92139Z"
-						fill="white"
-					/>
+	{#if $page.url.pathname === '/'}
+		<button class="w-auto ghost">
+			<svg
+				width="26"
+				height="24"
+				viewBox="0 0 26 24"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<g id="Add">
+					<g id="np_add_1776296_FFFFFF">
+						<path
+							id="Path"
+							d="M9.92139 0V9.75H0.171387V14.25H9.92139V24H14.4214V14.25H24.1714V9.75H14.4214V0H9.92139Z"
+							fill="white"
+						/>
+					</g>
 				</g>
-			</g>
-		</svg>
-	</button>
+			</svg>
+		</button>
+	{/if}
 </header>

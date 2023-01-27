@@ -1,21 +1,19 @@
 <script>
 	import { goto } from '$app/navigation';
-	import Main from 'components/weather/main.svelte';
+	import Current from 'components/weather/current.svelte';
 	import TimeForecast from 'components/weather/time/forecast.svelte';
 	import WeekForecast from 'components/weather/week/forecast.svelte';
 	import { currentLocationStore, locationsSearchStore, userStore } from 'store';
 	import { t } from 'translations';
 	export let data;
-
 	const date = new Date();
-
 	$: $userStore = data.user;
 	$: $locationsSearchStore = data.locationsList;
 	$: $currentLocationStore = data.currentLocation;
 </script>
 
 {#if $userStore.isLoggedIn}
-	<Main />
+	<Current />
 	<TimeForecast {date} />
 	<WeekForecast today={date.getDay()} />
 {:else}
