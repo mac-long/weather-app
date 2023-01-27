@@ -67,7 +67,7 @@
 			fill="currentColor"
 		/>
 
-		<span class="font-bold font-heading">Forecast</span>
+		<span class="text-sm font-bold font-heading">Forecast</span>
 	</a>
 	<a
 		class="flex flex-col items-center"
@@ -150,7 +150,7 @@
 			d="M5.01318 15.4952H5.01237C5.03332 15.4944 5.05347 15.4944 5.07442 15.4952H11.6142H11.6134C11.7866 15.4912 11.955 15.5573 12.0783 15.679C12.2024 15.8006 12.2725 15.9666 12.2725 16.1399C12.2725 16.3131 12.2024 16.4799 12.0783 16.6008C11.955 16.7225 11.7866 16.7885 11.6134 16.7845H5.07361H5.07442C4.7231 16.7934 4.42979 16.5202 4.41287 16.1697C4.39595 15.82 4.66266 15.5202 5.01237 15.4952L5.01318 15.4952Z"
 			fill="currentColor"
 		/>
-		<span class="font-bold font-heading">Prepare</span>
+		<span class="text-sm font-bold font-heading">Prepare</span>
 	</a>
 	<a
 		class="flex flex-col items-center"
@@ -232,7 +232,7 @@
 			fill="currentColor"
 		/>
 
-		<span class="font-bold font-heading">Profile</span>
+		<span class="text-sm font-bold font-heading">Profile</span>
 	</a>
 </div>
 
