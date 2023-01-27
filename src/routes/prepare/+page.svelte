@@ -1,7 +1,7 @@
 <script>
 	import CircleImage from 'components/general/circle-image.svelte';
 	import Content from 'components/general/content/content.svelte';
-	import Hero from 'components/general/Hero.svelte';
+	import Hero from 'components/general/hero.svelte';
 	import Subheading from 'components/general/subheading.svelte';
 	import PrepareList from 'components/prepare-list.svelte';
 	import Location from 'components/weather/current/location.svelte';
