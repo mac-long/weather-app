@@ -49,7 +49,8 @@
 	input {
 		@apply min-w-[315px] w-full px-2 py-1 bg-white rounded-md border-2 border-secondary;
 
-		&.checklist {
+		&.checklist,
+		&.profile {
 			@apply min-w-0 rounded-none border-none;
 		}
 
@@ -92,5 +93,11 @@
 		&.grey {
 			@apply bg-gray-600 text-white hover:bg-gray-500;
 		}
+	}
+
+	input[type='number']::-webkit-inner-spin-button,
+	input[type='number']::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
 	}
 }
