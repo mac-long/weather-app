@@ -21,7 +21,6 @@
 </script>
 
 {#if $page.url.pathname.includes('signup')}
-	<Header />
 	<slot />
 {:else}
 	<Header />

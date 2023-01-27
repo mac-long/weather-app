@@ -13,7 +13,7 @@
 	<span class="text-lg font-bold">21°</span>
 </div>
 
-<style>
+<style lang="postcss">
 	.active {
 		@apply from-primary-600 to-primary-500;
 	}

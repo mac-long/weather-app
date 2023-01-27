@@ -1,6 +1,6 @@
 <script>
 	import { goto } from '$app/navigation';
-	import Current from 'components/weather/current.svelte';
+	import Current from 'components/weather/container.svelte';
 	import TimeForecast from 'components/weather/time/forecast.svelte';
 	import WeekForecast from 'components/weather/week/forecast.svelte';
 	import { currentLocationStore, locationsSearchStore, userStore } from 'store';

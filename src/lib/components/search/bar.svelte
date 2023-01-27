@@ -3,6 +3,7 @@
 	import { page } from '$app/stores';
 	import debounce from 'lodash.debounce';
 	import { t } from 'translations';
+	export let searchOpen;
 
 	const updateSearch = debounce((e) => {
 		goto(`?location=${e.target.value}`, { replaceState: true, keepfocus: true });

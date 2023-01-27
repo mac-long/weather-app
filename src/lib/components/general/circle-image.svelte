@@ -4,7 +4,12 @@
 	if (presentation) alt = '';
 </script>
 
-<div class="relative my-8 border-white border-[12px] rounded-full">
-	<img class="rounded-full w-full " {src} {alt} role={presentation ? 'presentation' : 'img'} />
-	<div class="absolute top-0 left-0 w-full h-full rounded-full bg-[url(texture.webp)] " />
+<div class="relative flex my-8 rounded-full">
+	<img
+		class="w-56 h-56 border-white border-[8px] rounded-full"
+		{src}
+		{alt}
+		role={presentation ? 'presentation' : 'img'}
+	/>
+	<div class="absolute top-0 left-0 w-56 h-56 rounded-full bg-[url(texture.webp)] " />
 </div>

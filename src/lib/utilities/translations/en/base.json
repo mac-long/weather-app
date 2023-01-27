@@ -43,6 +43,7 @@
 	"weather.type.snow": "Snow",
 	"weather.type.storms": "Possible Storms",
 
+	"prepare.forecast.temporary": "Sunshine and showers are forecast in your monitored location.",
 	"prepare.hot": "Hot Day",
 	"prepare.hot.title": "Hot Day Checklist",
 	"prepare.cold": "Cold Day",

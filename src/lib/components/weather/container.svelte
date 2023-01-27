@@ -4,14 +4,13 @@
 	import Subheading from 'components/general/subheading.svelte';
 	import Location from 'components/weather/current/location.svelte';
 	import CurrentWeather from 'components/weather/current/weather.svelte';
-	import { t } from 'translations';
 	export let locations;
 </script>
 
 <Main>
 	<Location name={locations?.[0].name || 'Bournemouth'} />
-	<Subheading text={$t('base.prepare.forecast.temporary')} />
-	<CircleImage src="split-weather-placeholder.webp" presentation />
+	<Subheading date />
+	<CircleImage src="weather-placeholder.webp" presentation />
 	<CurrentWeather
 		temp={locations?.[0].current.temp_c || 21}
 		condition={locations?.[0].current.condition.text || 'Sunshine'}

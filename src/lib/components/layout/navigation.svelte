@@ -236,7 +236,7 @@
 	</a>
 </div>
 
-<style>
+<style lang="postcss">
 	.active,
 	a:hover {
 		@apply text-primary-500;
