@@ -1,5 +1,7 @@
 {
-	"general.title": "Weather App",
+	"general.title.forecast": "Weather App",
+	"general.title.prepare": "Prepare",
+	"general.title.profile": "Profile",
 	"general.today": "Today",
 	"general.button.next": "Next",
 	"general.button.confirm": "Confirm",
@@ -41,6 +43,7 @@
 	"weather.type.snow": "Snow",
 	"weather.type.storms": "Possible Storms",
 
+	"prepare.forecast.temporary": "Sunshine and showers are forecast in your monitored location.",
 	"prepare.hot": "Hot Day",
 	"prepare.hot.title": "Hot Day Checklist",
 	"prepare.cold": "Cold Day",

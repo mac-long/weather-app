@@ -1,6 +1,6 @@
 <script>
+	import Switch from 'components/general/switch/switch.svelte';
 	import Bar from 'components/search/bar.svelte';
-	import Switch from 'components/search/switch.svelte';
 	import Title from 'components/signup/title.svelte';
 	import { t } from 'translations';
 	export let currentStep, searchOpen;
@@ -15,7 +15,12 @@
 	{#if $currentStep === 4}
 		<div class="flex flex-col items-center justify-center px-12 py-2">
 			<Bar {searchOpen} />
-			<Switch options={['List', 'Map']} />
+			<Switch
+				options={[
+					{ text: 'List', onClick: () => null },
+					{ text: 'Map', onClick: () => null }
+				]}
+			/>
 		</div>
 	{/if}
 </div>
