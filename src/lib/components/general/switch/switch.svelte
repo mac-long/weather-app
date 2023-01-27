@@ -3,7 +3,9 @@
 	let selected = 0;
 </script>
 
-<div class="flex items-center w-full p-[3px] justify-center bg-pink-800 rounded-md space-x-1">
+<div
+	class="flex items-center w-full p-[3px] justify-center bg-pink-800 rounded-md space-x-1 max-w-[90vw]"
+>
 	<button
 		class="w-full px-2 py-[3px] font-light font-body text-center normal-case bg-transparent hover:bg-transparent"
 		class:active={selected === 0}

@@ -1,5 +1,6 @@
 <script>
 	import { goto } from '$app/navigation';
+	import Content from 'components/general/content/content.svelte';
 	import Current from 'components/weather/container.svelte';
 	import TimeForecast from 'components/weather/time/forecast.svelte';
 	import WeekForecast from 'components/weather/week/forecast.svelte';
@@ -15,7 +16,9 @@
 {#if $userStore.isLoggedIn}
 	<Current />
 	<TimeForecast {date} />
-	<WeekForecast today={date.getDay()} />
+	<Content title="Forecast">
+		<WeekForecast today={date.getDay()} />
+	</Content>
 {:else}
 	<div
 		class="flex flex-col items-center justify-center w-screen h-screen px-16 space-y-4 bg-primary-500"

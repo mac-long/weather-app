@@ -1,20 +1,23 @@
 <script>
 	import CircleImage from 'components/general/circle-image.svelte';
-	import Main from 'components/general/main.svelte';
+	import Hero from 'components/general/Hero.svelte';
 	import Subheading from 'components/general/subheading.svelte';
 	import Location from 'components/weather/current/location.svelte';
-	import CurrentWeather from 'components/weather/current/weather.svelte';
 	import { t } from 'translations';
+	import Switch from '../../lib/components/general/switch/switch.svelte';
+	import Checklist from '../../lib/components/prepare/checklist.svelte';
 	export let locations;
 </script>
 
-<Main>
+<Hero>
 	<Location name={locations?.[0].name || 'Bournemouth'} />
 	<Subheading text={$t('base.prepare.forecast.temporary')} />
 	<CircleImage src="split-weather-placeholder.webp" presentation />
-	<CurrentWeather
-		temp={locations?.[0].current.temp_c || 21}
-		condition={locations?.[0].current.condition.text || 'Sunshine'}
+	<Switch
+		options={[
+			{ text: $t('base.prepare.hot'), onClick: () => {} },
+			{ text: $t('base.prepare.cold'), onClick: () => {} }
+		]}
 	/>
-	<!-- TODO: Add slide counter and slides per saved location -->
-</Main>
+</Hero>
+<Checklist />
