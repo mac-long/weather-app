@@ -9,7 +9,7 @@
 	<button
 		class="w-full px-2 py-[3px] font-light font-body text-center normal-case bg-transparent hover:bg-transparent"
 		class:active={selected === 0}
-		on:click={() => (selected = 0)}
+		on:click={() => ((selected = 0), options[0].onClick())}
 	>
 		{options[0].text}
 	</button>
@@ -17,7 +17,7 @@
 	<button
 		class="w-full px-2 py-[3px] text-center font-light font-body normal-case text-white bg-transparent hover:bg-transparent"
 		class:active={selected === 1}
-		on:click={() => (selected = 1)}
+		on:click={() => ((selected = 1), options[1].onClick())}
 	>
 		{options[1].text}
 	</button>

@@ -35,7 +35,7 @@
 	}
 
 	hr {
-		@apply w-full bg-primary-500 py-0.5 border-0;
+		@apply w-full bg-primary-500 py-[1.5px] border-0;
 	}
 
 	ul {
@@ -53,17 +53,13 @@
 			@apply border-transparent;
 		}
 
-		[type='checkbox'] {
-			@apply w-4 h-4 rounded-full border-[2px] border-tertiary;
-
-			&:checked {
-				@apply bg-primary-500;
-			}
-		}
-
 		&::placeholder {
 			@apply text-secondary font-bold tracking-[-0.4px] leading-[22px];
 		}
+	}
+
+	input[type='checkbox'] {
+		@apply min-w-0 w-4;
 	}
 
 	progress {
