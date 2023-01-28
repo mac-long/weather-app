@@ -1,6 +1,11 @@
 <script>
+	import { currentStep } from 'store';
 	import { t } from 'translations';
-	export let handleClick, title, description;
+	export let title, description;
+
+	const handleClick = () => {
+		currentStep.update((n) => n + 1);
+	};
 </script>
 
 <div class="flex flex-col h-[100%] justify-between items-center py-10">

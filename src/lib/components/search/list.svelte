@@ -1,11 +1,10 @@
 <script>
 	import { goto } from '$app/navigation';
-	import { locationsSearchStore } from 'store';
-	export let searchOpen;
+	import { locationsSearchStore, searchOpen } from 'store';
 
 	const setSearch = (name, lat, lon) => {
 		goto(`?location=${name}&lat=${lat}&lon=${lon}`, { replaceState: true, keepfocus: true });
-		searchOpen = true;
+		searchOpen.set(true);
 	};
 </script>
 

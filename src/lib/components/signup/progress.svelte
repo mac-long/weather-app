@@ -1,5 +1,5 @@
 <script>
-	export let currentStep;
+	import { currentStep } from 'store';
 </script>
 
 {#if !currentStep === 4}

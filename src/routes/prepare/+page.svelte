@@ -3,11 +3,11 @@
 	import Content from 'components/general/content/content.svelte';
 	import Hero from 'components/general/hero.svelte';
 	import Subheading from 'components/general/subheading.svelte';
+	import Switch from 'components/general/switch.svelte';
 	import PrepareList from 'components/prepare-list.svelte';
 	import Location from 'components/weather/current/location.svelte';
 	import { writable } from 'svelte/store';
 	import { t } from 'translations';
-	import Switch from '../../lib/components/general/switch/switch.svelte';
 	export let locations;
 	let temp = writable('Hot');
 </script>

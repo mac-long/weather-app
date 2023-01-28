@@ -2,12 +2,12 @@
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import debounce from 'lodash.debounce';
+	import { searchOpen } from 'store';
 	import { t } from 'translations';
-	export let searchOpen;
 
 	const updateSearch = debounce((e) => {
 		goto(`?location=${e.target.value}`, { replaceState: true, keepfocus: true });
-		searchOpen = true;
+		searchOpen.set(true);
 	}, 500);
 </script>
 
