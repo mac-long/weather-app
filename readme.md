@@ -2,10 +2,13 @@
 
 ## Tools Used
 
-- **SvelteKit**: Frontend Code and SSR. A framework for sleek apps that compile to plain HTML, CSS and JavaScript, perfect for performance.
-- **PlanetScale**: Hosted SQL Database. A modern and efficient hosted SQL Database.
+- **SvelteKit**: Frontend Code and SSR. A framework for sleek apps that compile
+  to plain HTML, CSS and JavaScript, perfect for performance.
+- **PlanetScale**: Hosted SQL Database. A modern and efficient hosted SQL
+  Database.
 - **Prisma**: A convenient tool for interfacing with various databases.
-- **Tailwind**: Styling. Great for fast prototyping and building extensive design systems. Coupled with PostCSS Nesting makes for clean styling.
+- **Tailwind**: Styling. Great for fast prototyping and building extensive
+  design systems. Coupled with PostCSS Nesting makes for clean styling.
 
 ## To Do
 
