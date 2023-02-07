@@ -8,6 +8,7 @@
 	import { t } from 'translations';
 	export let data;
 	const date = new Date();
+	console.log(data);
 	$: $userStore = data.user;
 	$: $locationsSearchStore = data.locationsList;
 	$: $currentLocationStore = data.currentLocation;
