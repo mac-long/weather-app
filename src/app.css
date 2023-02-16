@@ -101,3 +101,16 @@
 		margin: 0;
 	}
 }
+
+@layer components {
+	.skeleton {
+		@apply animate-pulse rounded-md bg-gray-200 text-transparent px-16 h-[2rem] mb-1;
+
+		&.num {
+			@apply px-0 py-5;
+		}
+		&.sksm {
+			@apply py-0 h-[1rem];
+		}
+	}
+}

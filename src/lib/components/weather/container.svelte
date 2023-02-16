@@ -8,12 +8,12 @@
 </script>
 
 <Hero>
-	<Location name={$currentLocationStore?.location.name || 'Bournemouth'} />
+	<Location name={$currentLocationStore?.location.name} />
 	<Subheading date />
 	<CircleImage src="weather-placeholder.webp" presentation />
 	<CurrentWeather
-		temp={$currentLocationStore?.current.temp_c || null}
-		condition={$currentLocationStore?.current.condition || 'Sunshine'}
+		temp={$currentLocationStore?.current.temp_c}
+		condition={$currentLocationStore?.current.condition}
 	/>
 	<!-- TODO: Add slide counter and slides per saved location -->
 </Hero>

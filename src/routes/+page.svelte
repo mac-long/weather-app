@@ -19,7 +19,11 @@
 				const { latitude, longitude } = position.coords;
 				const currentLocation = await getCurrentWeatherByLatLon(latitude, longitude);
 
-				currentLocationStore.set(currentLocation);
+				currentLocationStore.update((value) => {
+					return {
+						...currentLocation
+					};
+				});
 			});
 		}
 	});
