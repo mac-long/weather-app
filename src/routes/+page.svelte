@@ -5,12 +5,24 @@
 	import TimeForecast from 'components/weather/time/forecast.svelte';
 	import WeekForecast from 'components/weather/week/forecast.svelte';
 	import { currentLocationStore, locationsSearchStore, userStore } from 'store';
+	import { onMount } from 'svelte';
 	import { t } from 'translations';
+	import { getCurrentWeatherByLatLon } from 'utilities/weather';
 	export let data;
 	const date = new Date();
 	$: $userStore = data.user;
 	$: $locationsSearchStore = data.locationsList;
-	$: $currentLocationStore = data.currentLocation;
+
+	onMount(async () => {
+		if ('geolocation' in navigator) {
+			navigator.geolocation.getCurrentPosition(async (position) => {
+				const { latitude, longitude } = position.coords;
+				const currentLocation = await getCurrentWeatherByLatLon(latitude, longitude);
+
+				currentLocationStore.set(currentLocation);
+			});
+		}
+	});
 </script>
 
 {#if $userStore.isLoggedIn}

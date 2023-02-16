@@ -17,24 +17,22 @@
 		</h1>
 	</div>
 	{#if $page.url.pathname === '/'}
-		<button class="w-auto ghost">
+		<button class="w-auto ghost" on:click{openSearch}>
 			<svg
-				width="26"
-				height="24"
-				viewBox="0 0 26 24"
-				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				class="feather feather-search"
+				><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg
 			>
-				<g id="Add">
-					<g id="np_add_1776296_FFFFFF">
-						<path
-							id="Path"
-							d="M9.92139 0V9.75H0.171387V14.25H9.92139V24H14.4214V14.25H24.1714V9.75H14.4214V0H9.92139Z"
-							fill="white"
-						/>
-					</g>
-				</g>
-			</svg>
+			<circle xmlns="http://www.w3.org/2000/svg" cx="11" cy="11" r="8" />
+			<line xmlns="http://www.w3.org/2000/svg" x1="21" y1="21" x2="16.65" y2="16.65" />
 		</button>
 	{/if}
 </header>

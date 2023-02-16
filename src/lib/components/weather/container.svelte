@@ -4,16 +4,16 @@
 	import Subheading from 'components/general/subheading.svelte';
 	import Location from 'components/weather/current/location.svelte';
 	import CurrentWeather from 'components/weather/current/weather.svelte';
-	export let locations;
+	import { currentLocationStore } from 'store';
 </script>
 
 <Hero>
-	<Location name={locations?.[0].name || 'Bournemouth'} />
+	<Location name={$currentLocationStore?.location.name || 'Bournemouth'} />
 	<Subheading date />
 	<CircleImage src="weather-placeholder.webp" presentation />
 	<CurrentWeather
-		temp={locations?.[0].current.temp_c || 21}
-		condition={locations?.[0].current.condition.text || 'Sunshine'}
+		temp={$currentLocationStore?.current.temp_c || null}
+		condition={$currentLocationStore?.current.condition || 'Sunshine'}
 	/>
 	<!-- TODO: Add slide counter and slides per saved location -->
 </Hero>
